@@ -3,7 +3,7 @@
 class Home extends Controller {
     public function index () 
     {
-        $data ["judul"] = "Home";
+        $data ["judul"] = "Login";
         $data ["nama"] = $this ->model ("User_model") ->getUser();
         $this ->view ("templates/header", $data);
         $this ->view ("home/index", $data);
@@ -19,7 +19,7 @@ class Home extends Controller {
     }
 
     public function masuk()
-    {   
+    {   var_dump($_POST);
         $data['user'] = $this->model('User_model')->login($_POST);
         if (isset($data['user']['id_user'])) {
                 $_SESSION['id_user'] = $data['user']['id_user'];

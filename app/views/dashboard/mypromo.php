@@ -9,7 +9,9 @@
         </div>
     </div>
     <?php if (!$data['promos']) {?>
-      <div><h1>Data kosong</h1></div>
+      <center>
+        <div><h2>Data kosong</h2></div>
+      </center>
     <?php } else { ?>
   <div class="table-responsive mt-2">
                       <table class="table table-striped jambo_table bulk_action">

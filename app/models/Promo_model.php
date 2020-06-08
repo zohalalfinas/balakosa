@@ -74,6 +74,15 @@ class Promo_model {
         $this->db->execute();
         return $this->db->rowCount();
     }
-    
+
+    public function getAllPromo($id)
+    {
+        $query = "SELECT * FROM promos WHERE NOT id_user = :id ";
+
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        return $this->db->resultSet();
+    }
 
 }

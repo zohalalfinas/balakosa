@@ -72,8 +72,8 @@
                   <li><a href="<?= BASEURL;?>/dashboard/mypromo"> <i class="fa fa-laptop"></i> yours</a></li>
                   <li><a href="<?= BASEURL;?>/dashboard/"><i class="fa fa-archive"></i>followed</a></li>
                   <li><a href="<?= BASEURL;?>/promo/"><i class="fa fa-newspaper-o"></i>promos</a></li>
-                  <li><a href="<?= BASEURL;?>/dashboard/"><i class="fa fa-line-chart"></i>withdrawals</a></li>
-                  <li><a href="<?= BASEURL;?>/dashboard/"><i class="fa fa-info"></i>payment info</a></li>
+                  <!-- <li><a href="<?= BASEURL;?>/dashboard/"><i class="fa fa-line-chart"></i>withdrawals</a></li> -->
+                  <!-- <li><a href="<?= BASEURL;?>/dashboard/"><i class="fa fa-info"></i>payment info</a></li> -->
                 </ul>
               </div>
 

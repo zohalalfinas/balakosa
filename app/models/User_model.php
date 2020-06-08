@@ -28,7 +28,7 @@ class User_model {
 
 	public function login($data)
 	{
-		$query = "SELECT * FROM users WHERE (username = :email-username OR email = :email-username) AND password = :password ";
+		$query = "SELECT * FROM users WHERE (username = :username OR email = :email) AND password = :password ";
 
 		$this->db->query($query);
 		$this->db->bind('username', $data['email-username']);
