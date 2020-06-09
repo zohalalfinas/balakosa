@@ -47,7 +47,7 @@ class Dashboard extends Controller {
     {
       if ($this->model('Promo_model')->insertPromo($_POST) > 0) {
           Flasher::setFlash('Berhasil', 'tambah promo', 'success');
-          header('Location: ' . BASEURL.'/dashboard');
+          header('Location: ' . BASEURL.'/dashboard/mypromo');
           exit;
       } else {
           Flasher::setFlash('Gagal', 'tambah promo', 'danger');

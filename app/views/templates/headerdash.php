@@ -70,7 +70,7 @@
                 <ul class="nav side-menu">
                   <li><a href="<?= BASEURL;?>/dashboard/"> <i class="fa fa-home"></i> dashboard</a></li>
                   <li><a href="<?= BASEURL;?>/dashboard/mypromo"> <i class="fa fa-laptop"></i> yours</a></li>
-                  <li><a href="<?= BASEURL;?>/dashboard/"><i class="fa fa-archive"></i>followed</a></li>
+                  <li><a href="<?= BASEURL;?>/promo/follow"><i class="fa fa-archive"></i>followed</a></li>
                   <li><a href="<?= BASEURL;?>/promo/"><i class="fa fa-newspaper-o"></i>promos</a></li>
                   <!-- <li><a href="<?= BASEURL;?>/dashboard/"><i class="fa fa-line-chart"></i>withdrawals</a></li> -->
                   <!-- <li><a href="<?= BASEURL;?>/dashboard/"><i class="fa fa-info"></i>payment info</a></li> -->
@@ -109,7 +109,7 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt=""><?= $data['user']['username']?>
+                      <?= $data['user']['username']?>
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="javascript:;"> Profile</a>

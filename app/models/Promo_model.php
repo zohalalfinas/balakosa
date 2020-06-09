@@ -30,6 +30,20 @@ class Promo_model {
                     
     }
 
+    public function postJoin($data)
+    {
+        $query = "INSERT INTO promo_users 
+                    VALUES 
+                ( '' , :id_promo , :id_user )";
+        
+        $this->db->query($query);
+        $this->db->bind('id_promo', $data);
+        $this->db->bind('id_user', $_SESSION['id_user']);
+        
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
     public function getById($id)
     {
         $query = "SELECT * FROM promos WHERE id_user = :id_user";
@@ -85,4 +99,22 @@ class Promo_model {
         return $this->db->resultSet();
     }
 
+    public function getPromoUser()
+    {
+        $query = "SELECT * FROM promo_users WHERE id_user = :id";
+
+        $this->db->query($query);
+        $this->db->bind('id', $_SESSION['id_user']);
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
+
+    public function getJoinPromo($id)
+    {
+        $query = "SELECT * FROM promo_users AS pu INNER JOIN promos AS p ON pu.id_promo = p.id_promo WHERE p.id_user != :id AND pu.id_user = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        return $this->db->resultSet();
+    }
 }

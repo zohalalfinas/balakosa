@@ -36,15 +36,15 @@ class Home extends Controller {
     
     public function registrasi()
     {   
-            if ($this->model('User_model')->regist($_POST) > 0) {
-                Flasher::setFlash('User Berhasil', 'didaftarkan', 'success');
-                header('Location: ' . BASEURL);
-                exit;
-            } else {
-                Flasher::setFlash('Gagal', 'Regist', 'danger');
-                header('Location: ' . BASEURL);
-                exit;
-            }
+        if ($this->model('User_model')->regist($_POST) > 0) {
+            Flasher::setFlash('User Berhasil', 'didaftarkan', 'success');
+            header('Location: ' . BASEURL);
+            exit;
+        } else {
+            Flasher::setFlash('Gagal', 'Regist', 'danger');
+            header('Location: ' . BASEURL);
+            exit;
+        }
         
     }
 
