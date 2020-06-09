@@ -59,6 +59,9 @@
           <button type="button"  onclick="copyUrl()" class="btn mt-1 btn-warning btn-sm">
             copy
           </button>
+          <button type="button" class="btn mt-1 btn-info btn-sm">
+            <a style="color:white;" href="<?= $promo['url']?>">view store</a> 
+          </button>
         </div>
       </div>
     
